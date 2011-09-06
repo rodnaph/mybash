@@ -3,6 +3,8 @@
 # include 'source /path/to/mybashrc' in .bash_profile
 #
 
+set -o vi
+
 export SVN_EDITOR=vim
 
 # aliases
