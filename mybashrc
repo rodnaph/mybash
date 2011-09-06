@@ -1,0 +1,37 @@
+
+#
+# include 'source /path/to/mybashrc' in .bash_profile
+#
+
+export SVN_EDITOR=vim
+
+# aliases
+
+alias g=git
+alias b=bzr
+alias less="less -R"
+
+# terminal styling
+
+export PS1="\W$ "
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+
+#
+# make a directory (possibly multiple) then
+# change into it.
+#
+
+mkcd() { 
+    mkdir -p $1 && cd $_; 
+}
+
+#
+# allow setting current shell title, useful
+# when you've got shells in tabs
+#
+
+tab() {
+    export PROMPT_COMMAND='echo -ne "\033]0;'$1'\007"';
+}
+
